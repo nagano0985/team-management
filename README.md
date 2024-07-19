@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Team Management Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição
+Este é um projeto de aplicação web para gerenciamento de times e tarefas, focado na atribuição e monitoramento de tarefas. A aplicação é construída com um front-end reativo usando React e um back-end em Node.js com integração ao Firebase para armazenamento de dados e autenticação de usuários.
 
-## Available Scripts
+## Funcionalidades
+- Cadastro de membros do time (nome, email e função)
+- Gestão de tarefas (descrição, prazo e prioridade)
+- Atribuição de tarefas aos membros
+- Tempo de alocação de tarefas
+- Notificações de prazo utilizando Firebase para alertar sobre tarefas próximas do vencimento
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
+- **Front-end:** React, Tailwind CSS
+- **Back-end:** Node.js, Express.js
+- **Banco de Dados e Autenticação:** Firebase (Firestore, Authentication, Functions)
+- **Outras:** React Router, Context API
 
-### `npm start`
+## Estrutura do Projeto
+```plaintext
+team-management/
+├── public/
+│   ├── index.html
+├── src/
+│   ├── components/
+│   │   ├── Dashboard.js
+│   │   ├── Login.js
+│   │   ├── Navbar.js
+│   │   ├── Register.js
+│   │   ├── TaskManagement.js
+│   │   └── TeamManagement.js
+│   ├── contexts/
+│   │   └── UserContext.js
+│   ├── firebase.js
+│   ├── App.js
+│   ├── index.css
+│   └── index.js
+├── .gitignore
+├── package.json
+└── README.md
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Instalação e Configuração
+Pré-requisitos
+Node.js instalado
+Conta no Firebase
 
-### `npm test`
+Configure o Firebase:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Crie um projeto no Firebase.
+Habilite Authentication e Firestore.
+Copie as configurações do Firebase para o arquivo src/firebase.js
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Como Usar
+Cadastro e Login
+Acesse a página de registro para criar uma nova conta.
+Faça login com as credenciais para acessar o dashboard.
+Gerenciamento de Tarefas
+No dashboard, você pode visualizar as tarefas atribuídas.
+Vá para "Task Management" para adicionar novas tarefas e atribuí-las aos membros do time.
+Gerenciamento de Membros
+Vá para "Team Management" para adicionar novos membros ao time.
+Notificações
+As notificações de tarefas próximas ao prazo serão gerenciadas pelo Firebase Functions.
